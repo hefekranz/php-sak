@@ -26,3 +26,14 @@ Not really intended for production usage, be smart.
 
 ### Tools
 - composer
+
+### Examples
+Just to give you an idea how to use it...
+
+```bash
+docker run -it -v "$PWD":/data -w /data --rm hefekranz/php-sak bash -c "composer install && php app.php"
+```
+
+It probably makes sense to add an alias/function for this where you hand the parameters to the -c flag.
+
+You could also think of adding a composer volume for caching...
